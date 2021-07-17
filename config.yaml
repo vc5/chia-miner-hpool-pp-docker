@@ -1,0 +1,18 @@
+path:
+- /plotsA
+- /plotsB
+minerName: miner1
+apiKey: your key
+cachePath: ""
+deviceId: ""
+extraParams: {}
+log:
+  lv: info
+  path: ./log/
+  name: minerlog
+url:
+  info: ""
+  submit: ""
+scanPath: true
+scanMinute: 60
+
