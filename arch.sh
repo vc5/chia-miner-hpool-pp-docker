@@ -1,8 +1,13 @@
 #!/bin/sh
-if [ "$TARGETARCH" = "amd64" ] ; then ARCH=linux;fi
+if [ "$TARGETARCH" = "amd64" ] ; then ARCH=amd64;fi
 if [ "$TARGETARCH" = "arm64" ] ; then ARCH=aarch64;fi
 if [ "$TARGETARCH" = "arm" ] ; then ARCH=arm;fi
 TAG=$1
 VER=$2
-echo "https://github.com/hpool-dev/chiapp-miner/releases/download/${TAG}/HPool-Miner-chia-pp-${VER}-${ARCH}.zip "
-wget -q --no-check-certificate https://github.com/hpool-dev/chiapp-miner/releases/download/${TAG}/HPool-Miner-chia-pp-${VER}-${ARCH}.zip -O /tmp/chia-miner.zip && unzip -j /tmp/chia-miner.zip -d /tmp/linux
+
+ZIP_URL="https://github.com/h9-dev/chiapp-miner/releases/download/v${TAG}/H9-Miner-chia-pp-${VER}-${ARCH}.zip "
+echo ${ZIP_URL}
+wget -q --no-check-certificate ${ZIP_URL} -O /tmp/chia-miner.zip && unzip -j /tmp/chia-miner.zip -d /tmp/linux
+ls /tmp/linux -ahl
+mv /tmp/linux/h9-miner-chia-linux-${ARCH} /opt/h9-chia-miner
+chmod +x /opt/h9-chia-miner

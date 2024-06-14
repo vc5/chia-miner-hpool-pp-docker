@@ -1,5 +1,5 @@
 # Hpool-Miner-Chiapp-Docker
-[Hpool-Miner-Chiapp](https://github.com/hpool-dev/chiapp-miner/releases)的docker镜像
+[Hpool-Miner-Chiapp](https://github.com/h9-dev/chiapp-miner/releases)的docker镜像
 
 # 如何使用
 
